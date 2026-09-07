@@ -1,29 +1,34 @@
 # Dokumentasi Proyek Data Science Binar Academy
 
 ## Deskripsi
-Proyek ini merupakan bagian dari bootcamp Data Science di Binar Academy, yang bertujuan untuk mengembangkan model machine learning untuk melakukan sentimen analisis terhadap data twitter yang efisien dengan menggunakan dataset yang telah diklasifikasikan.
+Proyek ini merupakan bagian dari bootcamp Data Science di Binar Academy, yang bertujuan untuk
+mengembangkan model machine learning untuk melakukan analisis sentimen terhadap data Twitter —
+menggunakan dataset yang telah diklasifikasikan menjadi label **positive**, **negative**, dan
+**neutral**.
 
-## Struktur Data
-- **Data Training**: Berisi dataset untuk training model machine learning.
-- **Data Klasifikasi**: Berisi file tambahan untuk cleansing data.
-- **Templates**: Berisi image dokumentasi dari project.
-- **dashboard.py**: Dashboard yang dibuat dengan Streamlit untuk menampilkan dokumentasi.
-
-## Library yang Digunakan
-Proyek ini menggunakan beberapa library Python yang umum dalam pengembangan machine learning dan data science:
-- `streamlit`
-- `pandas`
-- `re`
-- `PIL`
-
-## Cara Menjalankan Dashboard
-Untuk menjalankan dashboard, pastikan Anda telah menginstal Streamlit dan dependencies lainnya.
-
-Buka link berikut:
+Dokumentasi lengkap (EDA, model, dan tampilan API) disajikan sebagai dashboard Streamlit:
 
 https://bathis-ds-dasboard.streamlit.app/
 
-Atau jalankan perintah berikut di terminal Anda:
+## Struktur Proyek
+- **Dasboard.py** — dashboard dokumentasi (Streamlit).
+- **Data Training/** — dataset training `train_preprocess.tsv` (11.000 tweet beserta label sentimen).
+- **DataKlasifikasi/** — file pendukung cleansing data: `new_kamusalay.csv` (kamus kata alay),
+  `abusive.csv` (daftar kata kasar), dan `data.csv` (dataset awal berlabel HS).
+- **Templates/** — gambar dokumentasi (grafik, word cloud, evaluasi model, tampilan API) beserta
+  file HTML/CSS/JS antarmuka API.
+- **.streamlit/config.toml** — tema tampilan dashboard.
+
+## Library yang Digunakan
+Terinstal otomatis melalui `requirements.txt`:
+- `streamlit`
+- `pandas`
+- `Pillow`
+
+## Cara Menjalankan Dashboard
 ```bash
-streamlit run Dashboard.py
+pip install -r requirements.txt
+streamlit run Dasboard.py
 ```
+
+Atau buka link deployment di atas.
